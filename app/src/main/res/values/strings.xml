@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">OnlineGallery</string>
+    <string name="app_name">Online Gallery</string>
+
+    <!-- Picture Info -->
+    <string name="picture_id">ID: %1$s</string>
+    <string name="picture_author">Author: %1$s</string>
+    <string name="picture_width">Width: %1$s px</string>
+    <string name="picture_height">Height: %1$s px</string>
+    <string name="picture_url">Unsplash:&#160;</string>
+    <string name="picture_download_url">Download URL:&#160;</string>
+
+    <!-- No More Data Info -->
+    <string name="no_more_data">This is the end folks. No more pictures to load.</string>
+
+    <!-- Network Error -->
+    <string name="network_error_title">Network Error</string>
+    <string name="network_error_desc">We are having trouble connecting to the server. Please check your internet connection or try again later.</string>
+
+    <!-- Server Error -->
+    <string name="server_error_title">Server Error</string>
+    <string name="server_error_desc">An issue occurred on the server side. Please try again later.</string>
+
+    <!-- Unknown Error -->
+    <string name="unknown_error_title">Unknown Error</string>
+    <string name="unknown_error_desc">Something unexpected happened, too bad…</string>
 </resources>
