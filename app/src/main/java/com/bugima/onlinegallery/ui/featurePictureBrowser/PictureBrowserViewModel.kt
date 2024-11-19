@@ -52,6 +52,7 @@ class PictureBrowserViewModel @Inject constructor(
 
     private fun loadMoreImages() {
         viewModelScope.launch(Dispatchers.IO) {
+            if (state.value.isMoreLoading) return@launch
             _state.update { it.copy(isMoreLoading = true) }
             when (val result = fetchPicturesUseCase.execute()) {
                 is Result.Success -> _state.updateSuccess(result.data)

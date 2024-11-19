@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.filter
 @Composable
 fun LazyListState.ScrollEndCallback(
     isMoreLoading: Boolean,
-    threshold: Int = 2,
+    threshold: Int = 1,
     callback: () -> Unit
 ) {
     val stableCallback = rememberUpdatedState(callback)
