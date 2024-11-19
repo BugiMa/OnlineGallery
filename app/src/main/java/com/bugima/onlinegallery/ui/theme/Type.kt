@@ -19,4 +19,9 @@ val Typography = Typography(
         fontWeight = FontWeight.SemiBold,
         fontSize = 18.sp,
     ),
+    bodySmall = TextStyle(
+        fontFamily = FontFamily(Font(R.font.fredoka_light)),
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp,
+    )
 )
