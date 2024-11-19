@@ -7,14 +7,14 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import java.util.regex.Pattern
 
-class PaginationInterceptor: Interceptor {
+class PaginationInterceptor : Interceptor {
 
     private val linkHeaderPattern = Pattern.compile(LINK_HEADER_REGEX)
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val response = chain.proceed(chain.request())
 
-        response.header(LINK_HEADER)?.let {
+        return response.header(LINK_HEADER)?.let {
             linkHeaderPattern.matcher(it).takeIf { matcher -> matcher.find() }
                 ?.group(1)
                 ?.let { nextPageUrl ->
@@ -22,7 +22,6 @@ class PaginationInterceptor: Interceptor {
                         .addHeader(NEXT_PAGE_URL, nextPageUrl)
                         .build()
                 }
-        }
-        return response
+        } ?: response
     }
 }

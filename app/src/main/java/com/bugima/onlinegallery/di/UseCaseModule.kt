@@ -1,8 +1,8 @@
 package com.bugima.onlinegallery.di
 
-import com.bugima.onlinegallery.domain.repository.ImageRepository
-import com.bugima.onlinegallery.domain.usecase.FetchImagesUseCase
-import com.bugima.onlinegallery.domain.usecase.RefreshImagesUseCase
+import com.bugima.onlinegallery.domain.repository.PictureRepository
+import com.bugima.onlinegallery.domain.usecase.FetchPicturesUseCase
+import com.bugima.onlinegallery.domain.usecase.RefreshPicturesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,15 +14,15 @@ object UseCaseModule {
 
     @Provides
     fun provideFetchImagesUseCase(
-        repository: ImageRepository
-    ): FetchImagesUseCase {
-        return FetchImagesUseCase(repository)
+        repository: PictureRepository
+    ): FetchPicturesUseCase {
+        return FetchPicturesUseCase(repository)
     }
 
     @Provides
     fun provideRefreshImagesUseCase(
-        repository: ImageRepository
-    ): RefreshImagesUseCase {
-        return RefreshImagesUseCase(repository)
+        repository: PictureRepository
+    ): RefreshPicturesUseCase {
+        return RefreshPicturesUseCase(repository)
     }
 }

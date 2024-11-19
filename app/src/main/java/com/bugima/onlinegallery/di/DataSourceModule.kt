@@ -1,8 +1,8 @@
 package com.bugima.onlinegallery.di
 
 import com.bugima.onlinegallery.data.remote.api.LoremPicsumApi
-import com.bugima.onlinegallery.data.remote.datasource.ImageDataSource
-import com.bugima.onlinegallery.data.remote.datasource.ImageDataSourceImpl
+import com.bugima.onlinegallery.data.remote.datasource.PictureDataSource
+import com.bugima.onlinegallery.data.remote.datasource.PictureDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +15,7 @@ object DataSourceModule {
 
     @Provides
     @Singleton
-    fun provideCharacterDataSource(api: LoremPicsumApi): ImageDataSource {
-        return ImageDataSourceImpl(api)
+    fun provideCharacterDataSource(api: LoremPicsumApi): PictureDataSource {
+        return PictureDataSourceImpl(api)
     }
 }

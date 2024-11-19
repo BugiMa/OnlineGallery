@@ -2,7 +2,7 @@ package com.bugima.onlinegallery.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class ImageDto(
+data class PictureDto(
     @SerializedName("id") val id: String,
     @SerializedName("author") val author: String,
     @SerializedName("width") val width: Int,
