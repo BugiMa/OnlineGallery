@@ -81,7 +81,7 @@ fun PictureList(
 
         AnimatedVisibility(
             visible = !scrollState.isFirstItemVisible(),
-            enter = scaleIn( // TODO: Move to util
+            enter = scaleIn(
                 initialScale = 0f,
                 animationSpec = tween(durationMillis = 500)
             ),
